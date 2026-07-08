@@ -647,6 +647,54 @@ body{font-size:16px}
   body{font-size:15px}
 }
 
+/* ═══ MAPA MENTAL (próximos jogos) ═══ */
+.mm{position:relative;padding:4px 2px 34px;max-width:820px;margin:0 auto}
+.mm-intro{font-size:11px;color:var(--dim2);text-align:center;line-height:1.6;margin:2px auto 14px;max-width:560px}
+.mm-intro b{color:var(--gold2);font-weight:700}
+.mm-actions{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+.mm-btn{background:var(--gdim);border:1px solid rgba(212,175,55,.4);color:var(--gold2);font-family:var(--fn);font-size:11px;letter-spacing:.5px;padding:8px 13px;border-radius:20px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:all .18s}
+.mm-btn:hover{background:rgba(212,175,55,.22);transform:translateY(-1px)}
+.mm-btn.alt{border-color:rgba(0,156,59,.45);color:#43d17f;background:rgba(0,156,59,.10)}
+.mm-btn.alt:hover{background:rgba(0,156,59,.2)}
+
+.mm-root{position:relative;z-index:3;margin:0 auto 2px;width:max-content;max-width:100%;background:linear-gradient(135deg,#141d3a,#0b1430);border:1.5px solid var(--gold);border-radius:16px;padding:12px 24px;text-align:center;box-shadow:0 0 26px rgba(212,175,55,.28)}
+.mm-root .r1{font-family:var(--fh);font-size:21px;letter-spacing:2px;color:var(--gold);line-height:1}
+.mm-root .r2{font-size:9px;letter-spacing:1.5px;color:var(--dim);text-transform:uppercase;margin-top:3px}
+
+.mm-tree{position:relative;padding-top:8px}
+.mm-tree::before{content:"";position:absolute;top:0;bottom:34px;left:50%;width:2px;transform:translateX(-50%);background:linear-gradient(180deg,var(--gold),rgba(212,175,55,.12));z-index:0}
+
+.mm-day{position:relative;z-index:2;margin:22px auto 0;width:max-content;max-width:94%;background:linear-gradient(135deg,#0e1733,#0a1128);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:11px;padding:8px 16px;box-shadow:0 5px 16px rgba(0,0,0,.32);text-align:center}
+.mm-day.today{border-color:var(--gold);box-shadow:0 0 18px rgba(212,175,55,.25)}
+.mm-day.hasbr{border-left-color:var(--green)}
+.mm-day .d1{font-family:var(--fn);font-size:14px;font-weight:600;color:var(--text);letter-spacing:.5px}
+.mm-day .d2{font-size:9px;color:var(--dim);letter-spacing:1px;text-transform:uppercase;margin-top:1px}
+.mm-day .dcount{display:inline-block;background:var(--gold);color:#000;font-family:var(--fn);font-size:10px;font-weight:700;padding:1px 8px;border-radius:10px;margin-left:6px}
+.mm-day .tdtag{display:inline-block;background:var(--gold);color:#000;font-family:var(--fh);font-size:10px;letter-spacing:1px;padding:1px 7px;border-radius:4px;margin-left:6px}
+
+.mm-branch{position:relative;display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:9px;margin:0 auto;max-width:100%;padding-top:14px}
+.mm-branch::before{content:"";position:absolute;top:0;left:50%;width:2px;height:14px;background:var(--gold);transform:translateX(-50%)}
+.mm-leaf{position:relative;background:var(--card);border:1px solid var(--border);border-radius:9px;padding:9px 11px;transition:transform .18s,border-color .2s}
+.mm-leaf:hover{transform:translateY(-2px);border-color:rgba(212,175,55,.4)}
+.mm-leaf.hasbr{border-color:rgba(0,156,59,.5);box-shadow:0 0 14px rgba(0,156,59,.08)}
+.mm-leaf.fav{border-color:rgba(212,175,55,.5)}
+.mm-leaf.live{border-color:var(--red);animation:blink 1s ease-in-out infinite}
+.ml-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px}
+.ml-grp{font-size:8px;letter-spacing:1px;color:var(--dim);font-family:var(--fn);text-transform:uppercase}
+.ml-hr{font-family:var(--fn);font-size:13px;font-weight:700;color:var(--gold2)}
+.ml-hr.lvtag{color:#FF6B5A}
+.ml-teams{display:flex;align-items:center;justify-content:space-between;gap:6px;font-size:12px;font-weight:500}
+.ml-teams .t{display:flex;align-items:center;gap:5px;min-width:0;cursor:pointer}
+.ml-teams .t.r{flex-direction:row-reverse}
+.ml-teams .t .nm{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ml-teams .fl{font-size:17px;line-height:1}
+.ml-x{color:var(--dim);font-family:var(--fh);font-size:13px;padding:0 3px}
+.ml-cd{margin-top:7px;font-size:9px;color:var(--dim2);font-family:var(--fn);display:flex;align-items:center;gap:5px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.04);padding-top:5px}
+.ml-cd .cdv{color:var(--gold);font-weight:700}
+.ml-venue{font-size:9px;color:var(--dim);margin-top:3px;display:flex;align-items:center;gap:3px}
+.mm-empty{text-align:center;color:var(--dim);font-size:12px;padding:34px 14px;line-height:1.8}
+.mm-empty b{color:var(--gold2)}
+
 </style>
 </head>
 <body>
@@ -679,6 +727,7 @@ body{font-size:16px}
     <button class="nb on" onclick="tab('grupos',this)">🌍 GRUPOS</button>
     <button class="nb" onclick="tab('artilheiros',this)">🥇 ARTILHEIROS</button>
     <button class="nb" onclick="tab('calendario',this)">📅 CALENDÁRIO</button>
+    <button class="nb" onclick="tab('mapa',this)">🧠 MAPA</button>
     <button class="nb" onclick="tab('stats',this)">📊 STATS</button>
     <button class="nb" onclick="tab('chave',this)">🏆 CHAVE</button>
     <button class="nb" onclick="tab('palpites',this)">🎯 PALPITES</button>
@@ -720,6 +769,9 @@ body{font-size:16px}
   </section>
   <section id="calendario" class="sec">
     <div id="cal"></div>
+  </section>
+  <section id="mapa" class="sec">
+    <div id="mapa-wrap"></div>
   </section>
 
 <section id="stats" class="sec"><div id="stats-wrap"></div></section>
@@ -1491,6 +1543,108 @@ function renderCalendario(){
 
 
 
+// ═══════════════════════════════════════
+//  🧠 MAPA MENTAL — PRÓXIMOS JOGOS
+// ═══════════════════════════════════════
+// dias com jogos ainda não realizados (próximos). Mantém a ordem/rotulagem do calendário.
+function proximosDias(maxDias){
+  const porStatus = D.calendario.map(day=>{
+    const games=day.j.filter(j=>j.dt).filter(j=>{
+      const st=(typeof liveStatus==='function')?liveStatus(j):j.st;
+      return st==='fut' || st==='live';
+    });
+    return {d:day.d,w:day.w,hoje:day.hoje,games};
+  }).filter(x=>x.games.length);
+  // fallback (relógio já passou de tudo): mostra as partidas ainda não jogadas
+  let dias = porStatus;
+  if(!dias.length){
+    dias = D.calendario.map(day=>{
+      const games=day.j.filter(j=>j.dt && (!j.sc || j.sc==='×'));
+      return {d:day.d,w:day.w,hoje:day.hoje,games};
+    }).filter(x=>x.games.length);
+  }
+  return maxDias ? dias.slice(0,maxDias) : dias;
+}
+
+function renderMapaMental(){
+  const wrap=document.getElementById('mapa-wrap');
+  if(!wrap) return;
+  const dias=proximosDias(8);
+  const total=dias.reduce((n,d)=>n+d.games.length,0);
+  const notifOn=(typeof notifAtiva==='function')&&notifAtiva();
+
+  const acts=`<div class="mm-actions">
+    <span class="mm-btn" onclick="notifyJogosDoDia(true)">📅 Avisar horários de hoje</span>
+    <span class="mm-btn alt" onclick="notifyArtilheiros(true)">🥇 Ver artilheiros</span>
+    ${notifOn?'':'<span class="mm-btn" onclick="toggleNotif()">🔔 Ativar avisos</span>'}
+  </div>`;
+
+  if(!total){
+    wrap.innerHTML=`<div class="mm">
+      <div class="mm-root"><div class="r1">🧠 Próximos Jogos</div><div class="r2">Copa do Mundo 2026</div></div>
+      ${acts}
+      <div class="mm-empty">Não há jogos futuros no calendário salvo.<br>Peça <b>"atualiza a copa"</b> para carregar a próxima rodada. 🏆</div>
+    </div>`;
+    return;
+  }
+
+  const now=Date.now();
+  const treeHtml=dias.map(day=>{
+    const temBR=day.games.some(j=>j.m==='Brasil'||j.v==='Brasil');
+    const leaves=day.games.map(j=>{
+      const st=(typeof liveStatus==='function')?liveStatus(j):j.st;
+      const ko=new Date(j.dt).getTime();
+      const hr=(typeof horaJogo==='function')?horaJogo(j.dt,j.hr):(j.hr||'');
+      const isBR=(j.m==='Brasil'||j.v==='Brasil');
+      const isFV=(typeof isFav==='function')&&(isFav(j.m)||isFav(j.v));
+      const vn=(typeof getVenue==='function')?getVenue(j):null;
+      const live=st==='live';
+      let cd;
+      if(live){ cd=`<span class="cdv">🔴 AO VIVO</span> agora`; }
+      else if(ko>now){ cd=`<span class="cdv" data-mmcd="${j.dt}">${fmtCountdown(ko-now)}</span> até o apito`; }
+      else { cd=`agendado`; }
+      const cls=['mm-leaf', live?'live':'', isBR?'hasbr':'', (isFV&&!isBR)?'fav':''].filter(Boolean).join(' ');
+      const esc=s=>String(s).replace(/'/g,'');
+      return `<div class="${cls}">
+        <div class="ml-top">
+          <span class="ml-grp">${j.g}</span>
+          <span class="ml-hr ${live?'lvtag':''}">${live?'AO VIVO':hr}</span>
+        </div>
+        <div class="ml-teams">
+          <span class="t" onclick="openTeam('${esc(j.m)}')"><span class="fl">${j.fm}</span><span class="nm">${j.m}</span></span>
+          <span class="ml-x">×</span>
+          <span class="t r" onclick="openTeam('${esc(j.v)}')"><span class="fl">${j.fv}</span><span class="nm">${j.v}</span></span>
+        </div>
+        <div class="ml-cd">⏱ ${cd}</div>
+        ${vn?`<div class="ml-venue">📍 ${vn.c}, ${vn.p} ${vn.f}</div>`:''}
+      </div>`;
+    }).join('');
+    return `<div class="mm-day ${day.hoje?'today':''} ${temBR?'hasbr':''}">
+        <span class="d1">📅 ${day.d}</span>
+        <span class="d2">${day.w}</span>
+        <span class="dcount">${day.games.length}</span>
+        ${day.hoje?'<span class="tdtag">HOJE</span>':''}
+      </div>
+      <div class="mm-branch">${leaves}</div>`;
+  }).join('');
+
+  wrap.innerHTML=`<div class="mm">
+    <div class="mm-intro">Visão em <b>mapa mental</b> dos próximos jogos — do tronco (a Copa) saem os <b>dias</b>, e de cada dia os <b>jogos</b> com horário, sede e contagem regressiva ao vivo. 🇧🇷 verde = jogo do Brasil.</div>
+    ${acts}
+    <div class="mm-root"><div class="r1">🧠 Próximos Jogos</div><div class="r2">${total} ${total>1?'jogos':'jogo'} · ${dias.length} ${dias.length>1?'dias':'dia'}</div></div>
+    <div class="mm-tree">${treeHtml}</div>
+  </div>`;
+}
+
+// atualiza as contagens regressivas do mapa (chamado pelo relógio a cada 1s)
+function updateMapaCountdowns(){
+  const now=Date.now();
+  document.querySelectorAll('[data-mmcd]').forEach(el=>{
+    const ko=new Date(el.getAttribute('data-mmcd')).getTime();
+    el.textContent = ko>now ? fmtCountdown(ko-now) : '00min 00s';
+  });
+}
+
 // instalar PWA
 let _deferredPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();_deferredPrompt=e;const b=document.getElementById('instbtn');if(b)b.style.display='inline-flex';});
@@ -2151,6 +2305,7 @@ function tab(id,btn){
   document.getElementById(id).classList.add('on');
   btn.classList.add('on');
   if(id==='stats') renderStats();
+  else if(id==='mapa') renderMapaMental();
   else if(id==='chave') renderBracket();
   else if(id==='palpites') renderPalpites();
   else if(id==='sedes') renderSedes();
@@ -2254,6 +2409,10 @@ function tickClock(){
     const all=allMatches();
     const next=all.find(j=>liveStatus(j)==='fut');
     if(next) cd.textContent=fmtCountdown(new Date(next.dt).getTime()-Date.now());
+  }
+  // atualiza contagens regressivas do mapa mental quando visível
+  if(document.getElementById('mapa')?.classList.contains('on') && typeof updateMapaCountdowns==='function'){
+    updateMapaCountdowns();
   }
 }
 
@@ -2490,25 +2649,10 @@ function closeSyncModal(){ document.getElementById('syncModal')?.classList.remov
 // atualizar _syncInterval_ms no init
 _syncInterval_ms=getSyncInterval();
 
-// registrar última sincronização
-const _oldSyncLive2=typeof syncLive==='function'?syncLive.toString():'';
-if(_oldSyncLive2) {
-  const horaNow=()=>{
-    const d=new Date();
-    return d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
-  };
-  const _syncLiveWrapper=function(manual){
-    // chama original
-    try{ eval('('+_oldSyncLive2+')')(manual); }catch(e){}
-    // registra hora
-    localStorage.setItem('syncLastTime', horaNow());
-  };
-}
-
 // ═══════════════════════════════════════
 //  ⚡ SINCRONIZAÇÃO EM TEMPO REAL
 // ═══════════════════════════════════════
-let _syncInterval=null, _syncCountdown=0, _syncActive=false;
+let _syncInterval=null, _syncTick=null, _syncCountdown=0, _syncActive=false;
 const SYNC_INTERVAL=30000; // 30 segundos (ajustável)
 
 function getAutoSyncStatus(){ return localStorage.getItem('autoSync')==='1'; }
@@ -2531,32 +2675,35 @@ function updateSyncUI(){
 function startAutoSync(){
   if(_syncInterval) return; // já ativo
   if(!getAutoSyncStatus()) return;
-  
+
   _syncActive=true;
   _syncCountdown=_syncInterval_ms/1000;
-  
+
   // atualiza imediatamente
   syncLive(false);
-  
-  // countdown visual
+
+  // countdown visual — guarda a referência p/ poder limpar (evita vazamento de timers)
   const tick=()=>{
     const cnt=document.getElementById('syncCount');
+    if(_syncCountdown<0) _syncCountdown=0;
     if(cnt) cnt.innerText=_syncCountdown+'s';
     _syncCountdown--;
   };
-  setInterval(tick, 1000);
-  
+  if(_syncTick) clearInterval(_syncTick);
+  _syncTick=setInterval(tick, 1000);
+
   // sync a cada SYNC_INTERVAL
   _syncInterval=setInterval(()=>{
     syncLive(false);
     _syncCountdown=_syncInterval_ms/1000;
   }, _syncInterval_ms);
-  
+
   updateSyncUI();
 }
 
 function stopAutoSync(){
   if(_syncInterval){ clearInterval(_syncInterval); _syncInterval=null; }
+  if(_syncTick){ clearInterval(_syncTick); _syncTick=null; }
   _syncActive=false;
   updateSyncUI();
 }
@@ -2567,13 +2714,10 @@ function initAutoSync(){
   if(getAutoSyncStatus()){ startAutoSync(); }
 }
 
-// intercept syncLive pra atualizar o status visual
-const _origSyncLive=typeof syncLive==='function'?syncLive:null;
-function syncLive(manual){
-  if(_origSyncLive) _origSyncLive(manual);
-  // pisca o indicador quando sincroniza
+// pisca o indicador visual de sincronização (usado pelo syncLive real)
+function blinkSyncDot(){
   const st=document.getElementById('syncStatus');
-  if(st){ st.style.opacity='0.6'; setTimeout(()=>st.style.opacity='1',200); }
+  if(st){ st.style.opacity='0.6'; setTimeout(()=>{st.style.opacity='1';},200); }
 }
 
 // Parar sync se usuário sair da aba (economizar bateria)
@@ -2609,7 +2753,7 @@ function pushNotif(title, body, tag){
 function toast(title, body){
   let t=document.getElementById('ntoast');
   if(!t){t=document.createElement('div');t.id='ntoast';t.className='notiftoast';document.body.appendChild(t);}
-  t.innerHTML=`<span class="ic">⚽</span><div><b>${title}</b><br>${body||''}</div>`;
+  t.innerHTML=`<span class="ic">⚽</span><div><b>${title}</b><br>${(body||'').replace(/\n/g,'<br>')}</div>`;
   t.classList.add('show');
   clearTimeout(window._tt); window._tt=setTimeout(()=>t.classList.remove('show'),5500);
 }
@@ -2631,24 +2775,93 @@ async function toggleNotif(){
   if(perm!=='granted') perm=await Notification.requestPermission();
   if(perm==='granted'){
     localStorage.setItem('notif','1'); updNotifBtn();
-    pushNotif('🔔 Notificações ativadas!','Você será avisado a cada gol, com placar e quem marcou.','welcome');
+    pushNotif('🔔 Notificações ativadas!','Avisos de gol, horários dos jogos do dia, lembrete antes do jogo e artilharia da Copa.','welcome');
     notifyJogosDoDia(true);
+    setTimeout(()=>notifyArtilheiros(true), 1600);
   } else {
     toast('Permissão negada','Ative as notificações nas configurações do navegador.');
   }
 }
 
-// avisa os jogos do dia (1x por dia)
-function notifyJogosDoDia(force){
-  const hoje=new Date().toISOString().slice(0,10);
-  if(!force && localStorage.getItem('notifDia')===hoje) return;
+// data no fuso de Brasília (-03:00) no formato YYYY-MM-DD — evita jogar jogos
+// noturnos (22h/23h BRT) para o dia UTC seguinte
+function dataBrasilia(d){
+  const x = d ? new Date(d) : new Date();
+  const b = new Date(x.getTime() + (x.getTimezoneOffset()*60000) + (-3*3600000));
+  return b.getFullYear()+'-'+String(b.getMonth()+1).padStart(2,'0')+'-'+String(b.getDate()).padStart(2,'0');
+}
+
+// lista os jogos do dia (usada por notificação e pelo mapa)
+function jogosDeHoje(){
+  const hoje=dataBrasilia();
   const all=(typeof allMatches==='function')?allMatches():[];
-  const doDia=all.filter(j=>{ try{return new Date(j.dt).toISOString().slice(0,10)===hoje;}catch(e){return false;} });
+  return all.filter(j=>{ try{return dataBrasilia(j.dt)===hoje;}catch(e){return false;} });
+}
+
+// avisa os HORÁRIOS dos jogos do dia (1x por dia, ou forçado no botão)
+function notifyJogosDoDia(force){
+  const hoje=dataBrasilia();
+  if(!force && localStorage.getItem('notifDia')===hoje) return;
+  const doDia=jogosDeHoje();
+  const dLbl=new Date().toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'});
   if(doDia.length){
-    const txt=doDia.map(j=>`${j.m} x ${j.v} (${j.hr||''})`).join('\n');
-    pushNotif(`📅 ${doDia.length} jogos hoje na Copa`, txt, 'jogos-dia');
+    const txt=doDia.map(j=>{
+      const st=(typeof liveStatus==='function')?liveStatus(j):j.st;
+      const hr=(typeof horaJogo==='function')?horaJogo(j.dt,j.hr):(j.hr||'');
+      const sc=(j.sc&&j.sc!=='×')?j.sc:'';
+      const tag = st==='fim' ? `✅ ${j.m} ${sc} ${j.v}`
+               : st==='live' ? `🔴 AGORA ${j.m} ${sc||'×'} ${j.v}`
+               : `🕐 ${hr} · ${j.m} × ${j.v}`;
+      return tag;
+    }).join('\n');
+    pushNotif(`📅 ${doDia.length} ${doDia.length>1?'jogos':'jogo'} hoje (${dLbl})`, txt, 'jogos-dia');
+  } else {
+    if(force) pushNotif('📅 Sem jogos hoje', `Nenhuma partida da Copa em ${dLbl}. Confira os próximos no Mapa 🧠.`, 'jogos-dia');
   }
   localStorage.setItem('notifDia',hoje);
+}
+
+// avisa a ARTILHARIA da Copa (top scorers) — 1x por dia, ou forçado no botão
+function rankingArtilheiros(limit){
+  const arr=(D.artilheiros||[]).slice().sort((a,b)=>b.g-a.g);
+  let pos=0,lastG=Infinity,out=[];
+  arr.forEach(p=>{ if(p.g<lastG){pos++;lastG=p.g;} out.push({...p,rk:pos}); });
+  return limit ? out.filter(p=>p.rk<=limit) : out;
+}
+function notifyArtilheiros(force){
+  const hoje=new Date().toISOString().slice(0,10);
+  const top=rankingArtilheiros(3);
+  if(!top.length) return;
+  const assinatura=top.map(p=>p.n+p.g).join('|');
+  // dispara se: forçado, ou 1x/dia, ou se a artilharia mudou desde o último aviso
+  if(!force && localStorage.getItem('notifArtDia')===hoje && localStorage.getItem('notifArtSig')===assinatura) return;
+  const medal=['🥇','🥈','🥉'];
+  const txt=top.map((p,i)=>`${medal[i]||(p.rk+'º')} ${p.f} ${p.n} — ${p.g} ${p.g>1?'gols':'gol'}`).join('\n');
+  pushNotif('🥇 Artilheiros da Copa', txt, 'artilheiros');
+  localStorage.setItem('notifArtDia',hoje);
+  localStorage.setItem('notifArtSig',assinatura);
+}
+
+// ——— LEMBRETES: avisa quando um jogo está prestes a começar ———
+const REMIND_MIN = 15;                 // minutos antes do apito inicial
+function checkKickoffReminders(){
+  if(!notifAtiva()) return;
+  let done={}; try{ done=JSON.parse(localStorage.getItem('kickoffReminded')||'{}'); }catch(e){}
+  const now=Date.now();
+  (typeof allMatches==='function'?allMatches():[]).forEach(j=>{
+    if(!j.dt) return;
+    const ko=new Date(j.dt).getTime();
+    const mins=(ko-now)/60000;
+    const key=j.m+'|'+j.v+'|'+j.dt;
+    if(mins>0 && mins<=REMIND_MIN && !done[key]){
+      const hr=(typeof horaJogo==='function')?horaJogo(j.dt,j.hr):(j.hr||'');
+      const vn=(typeof getVenue==='function'&&getVenue(j))?' · 📍 '+getVenue(j).c:'';
+      pushNotif(`⏰ Começa em ${Math.max(1,Math.round(mins))} min`,
+                `${j.fm} ${j.m} × ${j.v} ${j.fv} — ${hr}${vn}`, 'ko-'+key);
+      done[key]=true;
+    }
+  });
+  localStorage.setItem('kickoffReminded',JSON.stringify(done));
 }
 
 // ——— DETECÇÃO DE GOL ———
@@ -2783,6 +2996,7 @@ let _syncing=false;
 async function syncLive(manual){
   if(!API.enabled || _syncing) return;
   _syncing=true;
+  if(typeof blinkSyncDot==='function') blinkSyncDot();   // feedback visual
   const btn=document.getElementById('refbtn'); if(btn) btn.disabled=true;
   setApiStatus('load', manual?'atualizando…':'conectando…');
   try{
@@ -2793,15 +3007,23 @@ async function syncLive(manual){
     } else {
       setApiStatus('ok', `conectado · sem jogos hoje · ${hh}`);
     }
+    // registra a hora da última sincronização (corrige o "Nunca" no modal)
+    localStorage.setItem('syncLastTime', hh);
+    if(typeof updateSyncInfo==='function') updateSyncInfo();
     // re-render tudo com os novos placares
     renderGrupos(); renderCalendario(); renderLivePanel(); renderTicker();
-    if(notifAtiva()){ detectGoals(); notifyJogosDoDia(false); }
+    if(document.getElementById('mapa')?.classList.contains('on')) renderMapaMental();
+    if(notifAtiva()){ detectGoals(); notifyJogosDoDia(false); notifyArtilheiros(false); }
   }catch(e){
     setApiStatus('warn', 'dados salvos (API off)');
+    localStorage.setItem('syncLastTime', new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})+' (offline)');
+    if(typeof updateSyncInfo==='function') updateSyncInfo();
   }finally{
     _syncing=false;
     if(btn) btn.disabled=false;
   }
+  // lembretes de jogos prestes a começar (roda sempre que sincroniza)
+  if(typeof checkKickoffReminders==='function') checkKickoffReminders();
 }
 
 // INIT
@@ -2830,6 +3052,10 @@ setInterval(()=>{
   const temLive=all.some(j=>liveStatus(j)==='live');
   if(temLive) syncLive(false);
 }, 60000);
+// lembretes de jogos prestes a começar — verifica a cada 30s (independe da API)
+setInterval(()=>{ if(notifAtiva()) checkKickoffReminders(); }, 30000);
+// se já estava com notificações ligadas ao abrir, relembra os horários do dia + artilharia
+if(notifAtiva()){ notifyJogosDoDia(false); notifyArtilheiros(false); checkKickoffReminders(); }
 </script>
 
 <div class="ovl" id="ovl" onclick="if(event.target===this)closeTeam()">

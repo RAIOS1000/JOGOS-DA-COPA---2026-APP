@@ -656,6 +656,9 @@ body{font-size:16px}
 .mm-btn:hover{background:rgba(212,175,55,.22);transform:translateY(-1px)}
 .mm-btn.alt{border-color:rgba(0,156,59,.45);color:#43d17f;background:rgba(0,156,59,.10)}
 .mm-btn.alt:hover{background:rgba(0,156,59,.2)}
+.mm-btn.on{background:var(--gold);color:#000;border-color:var(--gold);font-weight:700}
+.mm-btn.on:hover{background:var(--gold2)}
+.mm-range{margin-top:-6px;margin-bottom:16px}
 
 .mm-root{position:relative;z-index:3;margin:0 auto 2px;width:max-content;max-width:100%;background:linear-gradient(135deg,#141d3a,#0b1430);border:1.5px solid var(--gold);border-radius:16px;padding:12px 24px;text-align:center;box-shadow:0 0 26px rgba(212,175,55,.28)}
 .mm-root .r1{font-family:var(--fh);font-size:21px;letter-spacing:2px;color:var(--gold);line-height:1}
@@ -1566,10 +1569,17 @@ function proximosDias(maxDias){
   return maxDias ? dias.slice(0,maxDias) : dias;
 }
 
+// preferência de quantos dias o mapa exibe (3 = foco nos próximos; null = todos)
+function mapaDiasPref(){ const v=localStorage.getItem('mapaDias'); if(v==='all') return null; const n=parseInt(v||'3',10); return isNaN(n)?3:n; }
+function setMapaDias(v){ localStorage.setItem('mapaDias', v==null?'all':String(v)); renderMapaMental(); }
+
 function renderMapaMental(){
   const wrap=document.getElementById('mapa-wrap');
   if(!wrap) return;
-  const dias=proximosDias(8);
+  const pref=mapaDiasPref();
+  const todosDias=proximosDias(null);                 // todos os dias com jogos futuros
+  const totDias=todosDias.length;
+  const dias=pref?todosDias.slice(0,pref):todosDias;   // fatia conforme a preferência
   const total=dias.reduce((n,d)=>n+d.games.length,0);
   const notifOn=(typeof notifAtiva==='function')&&notifAtiva();
 
@@ -1578,6 +1588,12 @@ function renderMapaMental(){
     <span class="mm-btn alt" onclick="notifyArtilheiros(true)">🥇 Ver artilheiros</span>
     ${notifOn?'':'<span class="mm-btn" onclick="toggleNotif()">🔔 Ativar avisos</span>'}
   </div>`;
+
+  // controle de alcance (só faz sentido se há mais dias do que o foco exibe)
+  const rangeCtrl=(totDias>3)?`<div class="mm-actions mm-range">
+    <span class="mm-btn ${pref===3?'on':''}" onclick="setMapaDias(3)">🎯 Próximos 3 dias</span>
+    <span class="mm-btn ${pref===null?'on':''}" onclick="setMapaDias(null)">📆 Todos os dias (${totDias})</span>
+  </div>`:'';
 
   if(!total){
     wrap.innerHTML=`<div class="mm">
@@ -1631,7 +1647,8 @@ function renderMapaMental(){
   wrap.innerHTML=`<div class="mm">
     <div class="mm-intro">Visão em <b>mapa mental</b> dos próximos jogos — do tronco (a Copa) saem os <b>dias</b>, e de cada dia os <b>jogos</b> com horário, sede e contagem regressiva ao vivo. 🇧🇷 verde = jogo do Brasil.</div>
     ${acts}
-    <div class="mm-root"><div class="r1">🧠 Próximos Jogos</div><div class="r2">${total} ${total>1?'jogos':'jogo'} · ${dias.length} ${dias.length>1?'dias':'dia'}</div></div>
+    ${rangeCtrl}
+    <div class="mm-root"><div class="r1">🧠 Próximos Jogos</div><div class="r2">${total} ${total>1?'jogos':'jogo'} · ${dias.length} ${dias.length>1?'dias':'dia'}${(pref&&totDias>pref)?` · de ${totDias}`:''}</div></div>
     <div class="mm-tree">${treeHtml}</div>
   </div>`;
 }

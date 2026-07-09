@@ -1,0 +1,2039 @@
+{
+ "grupos": [
+  {
+   "letra": "A",
+   "brasil": false,
+   "tab": [
+    {
+     "t": "México",
+     "f": "🇲🇽",
+     "pts": 3,
+     "j": 1,
+     "v": 1,
+     "e": 0,
+     "d": 0,
+     "gp": 2,
+     "gc": 0
+    },
+    {
+     "t": "Coreia do Sul",
+     "f": "🇰🇷",
+     "pts": 3,
+     "j": 1,
+     "v": 1,
+     "e": 0,
+     "d": 0,
+     "gp": 2,
+     "gc": 1
+    },
+    {
+     "t": "Rep. Tcheca",
+     "f": "🇨🇿",
+     "pts": 0,
+     "j": 1,
+     "v": 0,
+     "e": 0,
+     "d": 1,
+     "gp": 1,
+     "gc": 2
+    },
+    {
+     "t": "África do Sul",
+     "f": "🇿🇦",
+     "pts": 0,
+     "j": 1,
+     "v": 0,
+     "e": 0,
+     "d": 1,
+     "gp": 0,
+     "gc": 2
+    }
+   ],
+   "res": [
+    {
+     "dt": "11 Jun",
+     "m": "México",
+     "fm": "🇲🇽",
+     "sc": "2–0",
+     "v": "África do Sul",
+     "fv": "🇿🇦",
+     "st": "fim"
+    },
+    {
+     "dt": "11 Jun",
+     "m": "Coreia do Sul",
+     "fm": "🇰🇷",
+     "sc": "2–1",
+     "v": "Rep. Tcheca",
+     "fv": "🇨🇿",
+     "st": "fim"
+    },
+    {
+     "dt": "18 Jun",
+     "m": "Rep. Tcheca",
+     "fm": "🇨🇿",
+     "sc": "×",
+     "v": "África do Sul",
+     "fv": "🇿🇦",
+     "st": "fut"
+    },
+    {
+     "dt": "18 Jun",
+     "m": "México",
+     "fm": "🇲🇽",
+     "sc": "×",
+     "v": "Coreia do Sul",
+     "fv": "🇰🇷",
+     "st": "fut"
+    }
+   ]
+  },
+  {
+   "letra": "B",
+   "brasil": false,
+   "tab": [
+    {
+     "t": "Canadá",
+     "f": "🇨🇦",
+     "pts": 1,
+     "j": 1,
+     "v": 0,
+     "e": 1,
+     "d": 0,
+     "gp": 1,
+     "gc": 1
+    },
+    {
+     "t": "Bósnia",
+     "f": "🇧🇦",
+     "pts": 1,
+     "j": 1,
+     "v": 0,
+     "e": 1,
+     "d": 0,
+     "gp": 1,
+     "gc": 1
+    },
+    {
+     "t": "Qatar",
+     "f": "🇶🇦",
+     "pts": 1,
+     "j": 1,
+     "v": 0,
+     "e": 1,
+     "d": 0,
+     "gp": 1,
+     "gc": 1
+    },
+    {
+     "t": "Suíça",
+     "f": "🇨🇭",
+     "pts": 1,
+     "j": 1,
+     "v": 0,
+     "e": 1,
+     "d": 0,
+     "gp": 1,
+     "gc": 1
+    }
+   ],
+   "res": [
+    {
+     "dt": "12 Jun",
+     "m": "Canadá",
+     "fm": "🇨🇦",
+     "sc": "1–1",
+     "v": "Bósnia",
+     "fv": "🇧🇦",
+     "st": "fim"
+    },
+    {
+     "dt": "13 Jun",
+     "m": "Qatar",
+     "fm": "🇶🇦",
+     "sc": "1–1",
+     "v": "Suíça",
+     "fv": "🇨🇭",
+     "st": "fim"
+    },
+    {
+     "dt": "18 Jun",
+     "m": "Suíça",
+     "fm": "🇨🇭",
+     "sc": "×",
+     "v": "Bósnia",
+     "fv": "🇧🇦",
+     "st": "fut"
+    },
+    {
+     "dt": "18 Jun",
+     "m": "Canadá",
+     "fm": "🇨🇦",
+     "sc": "×",
+     "v": "Qatar",
+     "fv": "🇶🇦",
+     "st": "fut"
+    }
+   ]
+  },
+  {
+   "letra": "C",
+   "brasil": true,
+   "tab": [
+    {
+     "t": "Escócia",
+     "f": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+     "pts": 3,
+     "j": 1,
+     "v": 1,
+     "e": 0,
+     "d": 0,
+     "gp": 1,
+     "gc": 0
+    },
+    {
+     "t": "Brasil",
+     "f": "🇧🇷",
+     "pts": 1,
+     "j": 1,
+     "v": 0,
+     "e": 1,
+     "d": 0,
+     "gp": 1,
+     "gc": 1
+    },
+    {
+     "t": "Marrocos",
+     "f": "🇲🇦",
+     "pts": 1,
+     "j": 1,
+     "v": 0,
+     "e": 1,
+     "d": 0,
+     "gp": 1,
+     "gc": 1
+    },
+    {
+     "t": "Haiti",
+     "f": "🇭🇹",
+     "pts": 0,
+     "j": 1,
+     "v": 0,
+     "e": 0,
+     "d": 1,
+     "gp": 0,
+     "gc": 1
+    }
+   ],
+   "res": [
+    {
+     "dt": "13 Jun",
+     "m": "Brasil",
+     "fm": "🇧🇷",
+     "sc": "1–1",
+     "v": "Marrocos",
+     "fv": "🇲🇦",
+     "st": "fim"
+    },
+    {
+     "dt": "13 Jun",
+     "m": "Haiti",
+     "fm": "🇭🇹",
+     "sc": "0–1",
+     "v": "Escócia",
+     "fv": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+     "st": "fim"
+    },
+    {
+     "dt": "19 Jun",
+     "m": "Escócia",
+     "fm": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+     "sc": "×",
+     "v": "Marrocos",
+     "fv": "🇲🇦",
+     "st": "fut"
+    },
+    {
+     "dt": "19 Jun",
+     "m": "Brasil",
+     "fm": "🇧🇷",
+     "sc": "×",
+     "v": "Haiti",
+     "fv": "🇭🇹",
+     "st": "fut"
+    }
+   ]
+  },
+  {
+   "letra": "D",
+   "brasil": false,
+   "tab": [
+    {
+     "t": "EUA",
+     "f": "🇺🇸",
+     "pts": 3,
+     "j": 1,
+     "v": 1,
+     "e": 0,
+     "d": 0,
+     "gp": 4,
+     "gc": 1
+    },
+    {
+     "t": "Austrália",
+     "f": "🇦🇺",
+     "pts": 3,
+     "j": 1,
+     "v": 1,
+     "e": 0,
+     "d": 0,
+     "gp": 2,
+     "gc": 0
+    },
+    {
+     "t": "Turquia",
+     "f": "🇹🇷",
+     "pts": 0,
+     "j": 1,
+     "v": 0,
+     "e": 0,
+     "d": 1,
+     "gp": 0,
+     "gc": 2
+    },
+    {
+     "t": "Paraguai",
+     "f": "🇵🇾",
+     "pts": 0,
+     "j": 1,
+     "v": 0,
+     "e": 0,
+     "d": 1,
+     "gp": 1,
+     "gc": 4
+    }
+   ],
+   "res": [
+    {
+     "dt": "12 Jun",
+     "m": "EUA",
+     "fm": "🇺🇸",
+     "sc": "4–1",
+     "v": "Paraguai",
+     "fv": "🇵🇾",
+     "st": "fim"
+    },
+    {
+     "dt": "14 Jun",
+     "m": "Austrália",
+     "fm": "🇦🇺",
+     "sc": "2–0",
+     "v": "Turquia",
+     "fv": "🇹🇷",
+     "st": "fim"
+    },
+    {
+     "dt": "19 Jun",
+     "m": "EUA",
+     "fm": "🇺🇸",
+     "sc": "×",
+     "v": "Austrália",
+     "fv": "🇦🇺",
+     "st": "fut"
+    },
+    {
+     "dt": "19 Jun",
+     "m": "Turquia",
+     "fm": "🇹🇷",
+     "sc": "×",
+     "v": "Paraguai",
+     "fv": "🇵🇾",
+     "st": "fut"
+    }
+   ]
+  },
+  {
+   "letra": "E",
+   "brasil": false,
+   "tab": [
+    {
+     "t": "Alemanha",
+     "f": "🇩🇪",
+     "pts": 3,
+     "j": 1,
+     "v": 1,
+     "e": 0,
+     "d": 0,
+     "gp": 7,
+     "gc": 1
+    },
+    {
+     "t": "C. Marfim",
+     "f": "🇨🇮",
+     "pts": 3,
+     "j": 1,
+     "v": 1,
+     "e": 0,
+     "d": 0,
+     "gp": 1,
+     "gc": 0
+    },
+    {
+     "t": "Equador",
+     "f": "🇪🇨",
+     "pts": 0,
+     "j": 1,
+     "v": 0,
+     "e": 0,
+     "d": 1,
+     "gp": 0,
+     "gc": 1
+    },
+    {
+     "t": "Curaçao",
+     "f": "🇨🇼",
+     "pts": 0,
+     "j": 1,
+     "v": 0,
+     "e": 0,
+     "d": 1,
+     "gp": 1,
+     "gc": 7
+    }
+   ],
+   "res": [
+    {
+     "dt": "14 Jun",
+     "m": "Alemanha",
+     "fm": "🇩🇪",
+     "sc": "7–1",
+     "v": "Curaçao",
+     "fv": "🇨🇼",
+     "st": "fim"
+    },
+    {
+     "dt": "14 Jun",
+     "m": "C. Marfim",
+     "fm": "🇨🇮",
+     "sc": "1–0",
+     "v": "Equador",
+     "fv": "🇪🇨",
+     "st": "fim"
+    },
+    {
+     "dt": "20 Jun",
+     "m": "Alemanha",
+     "fm": "🇩🇪",
+     "sc": "×",
+     "v": "C. Marfim",
+     "fv": "🇨🇮",
+     "st": "fut"
+    },
+    {
+     "dt": "20 Jun",
+     "m": "Equador",
+     "fm": "🇪🇨",
+     "sc": "×",
+     "v": "Curaçao",
+     "fv": "🇨🇼",
+     "st": "fut"
+    }
+   ]
+  },
+  {
+   "letra": "F",
+   "brasil": false,
+   "tab": [
+    {
+     "t": "Suécia",
+     "f": "🇸🇪",
+     "pts": 3,
+     "j": 1,
+     "v": 1,
+     "e": 0,
+     "d": 0,
+     "gp": 5,
+     "gc": 1
+    },
+    {
+     "t": "Holanda",
+     "f": "🇳🇱",
+     "pts": 1,
+     "j": 1,
+     "v": 0,
+     "e": 1,
+     "d": 0,
+     "gp": 2,
+     "gc": 2
+    },
+    {
+     "t": "Japão",
+     "f": "🇯🇵",
+     "pts": 1,
+     "j": 1,
+     "v": 0,
+     "e": 1,
+     "d": 0,
+     "gp": 2,
+     "gc": 2
+    },
+    {
+     "t": "Tunísia",
+     "f": "🇹🇳",
+     "pts": 0,
+     "j": 1,
+     "v": 0,
+     "e": 0,
+     "d": 1,
+     "gp": 1,
+     "gc": 5
+    }
+   ],
+   "res": [
+    {
+     "dt": "14 Jun",
+     "m": "Holanda",
+     "fm": "🇳🇱",
+     "sc": "2–2",
+     "v": "Japão",
+     "fv": "🇯🇵",
+     "st": "fim"
+    },
+    {
+     "dt": "15 Jun",
+     "m": "Suécia",
+     "fm": "🇸🇪",
+     "sc": "5–1",
+     "v": "Tunísia",
+     "fv": "🇹🇳",
+     "st": "fim"
+    },
+    {
+     "dt": "20 Jun",
+     "m": "Holanda",
+     "fm": "🇳🇱",
+     "sc": "×",
+     "v": "Suécia",
+     "fv": "🇸🇪",
+     "st": "fut"
+    },
+    {
+     "dt": "20 Jun",
+     "m": "Tunísia",
+     "fm": "🇹🇳",
+     "sc": "×",
+     "v": "Japão",
+     "fv": "🇯🇵",
+     "st": "fut"
+    }
+   ]
+  },
+  {
+   "letra": "G",
+   "brasil": false,
+   "tab": [
+    {
+     "t": "Bélgica",
+     "f": "🇧🇪",
+     "pts": 1,
+     "j": 1,
+     "v": 0,
+     "e": 1,
+     "d": 0,
+     "gp": 1,
+     "gc": 1
+    },
+    {
+     "t": "Egito",
+     "f": "🇪🇬",
+     "pts": 1,
+     "j": 1,
+     "v": 0,
+     "e": 1,
+     "d": 0,
+     "gp": 1,
+     "gc": 1
+    },
+    {
+     "t": "Irã",
+     "f": "🇮🇷",
+     "pts": 1,
+     "j": 1,
+     "v": 0,
+     "e": 1,
+     "d": 0,
+     "gp": 2,
+     "gc": 2
+    },
+    {
+     "t": "N. Zelândia",
+     "f": "🇳🇿",
+     "pts": 1,
+     "j": 1,
+     "v": 0,
+     "e": 1,
+     "d": 0,
+     "gp": 2,
+     "gc": 2
+    }
+   ],
+   "res": [
+    {
+     "dt": "15 Jun",
+     "m": "Bélgica",
+     "fm": "🇧🇪",
+     "sc": "1–1",
+     "v": "Egito",
+     "fv": "🇪🇬",
+     "st": "fim"
+    },
+    {
+     "dt": "15 Jun",
+     "m": "Irã",
+     "fm": "🇮🇷",
+     "sc": "2–2",
+     "v": "N. Zelândia",
+     "fv": "🇳🇿",
+     "st": "fim"
+    },
+    {
+     "dt": "21 Jun",
+     "m": "Bélgica",
+     "fm": "🇧🇪",
+     "sc": "×",
+     "v": "Irã",
+     "fv": "🇮🇷",
+     "st": "fut"
+    },
+    {
+     "dt": "21 Jun",
+     "m": "N. Zelândia",
+     "fm": "🇳🇿",
+     "sc": "×",
+     "v": "Egito",
+     "fv": "🇪🇬",
+     "st": "fut"
+    }
+   ]
+  },
+  {
+   "letra": "H",
+   "brasil": false,
+   "tab": [
+    {
+     "t": "Espanha",
+     "f": "🇪🇸",
+     "pts": 1,
+     "j": 1,
+     "v": 0,
+     "e": 1,
+     "d": 0,
+     "gp": 0,
+     "gc": 0
+    },
+    {
+     "t": "Cabo Verde",
+     "f": "🇨🇻",
+     "pts": 1,
+     "j": 1,
+     "v": 0,
+     "e": 1,
+     "d": 0,
+     "gp": 0,
+     "gc": 0
+    },
+    {
+     "t": "Ar. Saudita",
+     "f": "🇸🇦",
+     "pts": 1,
+     "j": 1,
+     "v": 0,
+     "e": 1,
+     "d": 0,
+     "gp": 1,
+     "gc": 1
+    },
+    {
+     "t": "Uruguai",
+     "f": "🇺🇾",
+     "pts": 1,
+     "j": 1,
+     "v": 0,
+     "e": 1,
+     "d": 0,
+     "gp": 1,
+     "gc": 1
+    }
+   ],
+   "res": [
+    {
+     "dt": "15 Jun",
+     "m": "Espanha",
+     "fm": "🇪🇸",
+     "sc": "0–0",
+     "v": "Cabo Verde",
+     "fv": "🇨🇻",
+     "st": "fim"
+    },
+    {
+     "dt": "15 Jun",
+     "m": "Ar. Saudita",
+     "fm": "🇸🇦",
+     "sc": "1–1",
+     "v": "Uruguai",
+     "fv": "🇺🇾",
+     "st": "fim"
+    },
+    {
+     "dt": "21 Jun",
+     "m": "Espanha",
+     "fm": "🇪🇸",
+     "sc": "×",
+     "v": "Ar. Saudita",
+     "fv": "🇸🇦",
+     "st": "fut"
+    },
+    {
+     "dt": "21 Jun",
+     "m": "Uruguai",
+     "fm": "🇺🇾",
+     "sc": "×",
+     "v": "Cabo Verde",
+     "fv": "🇨🇻",
+     "st": "fut"
+    }
+   ]
+  },
+  {
+   "letra": "I",
+   "brasil": false,
+   "tab": [
+    {
+     "t": "Noruega",
+     "f": "🇳🇴",
+     "pts": 3,
+     "j": 1,
+     "v": 1,
+     "e": 0,
+     "d": 0,
+     "gp": 4,
+     "gc": 1
+    },
+    {
+     "t": "França",
+     "f": "🇫🇷",
+     "pts": 3,
+     "j": 1,
+     "v": 1,
+     "e": 0,
+     "d": 0,
+     "gp": 3,
+     "gc": 1
+    },
+    {
+     "t": "Senegal",
+     "f": "🇸🇳",
+     "pts": 0,
+     "j": 1,
+     "v": 0,
+     "e": 0,
+     "d": 1,
+     "gp": 1,
+     "gc": 3
+    },
+    {
+     "t": "Iraque",
+     "f": "🇮🇶",
+     "pts": 0,
+     "j": 1,
+     "v": 0,
+     "e": 0,
+     "d": 1,
+     "gp": 1,
+     "gc": 4
+    }
+   ],
+   "res": [
+    {
+     "dt": "16 Jun",
+     "m": "França",
+     "fm": "🇫🇷",
+     "sc": "3–1",
+     "v": "Senegal",
+     "fv": "🇸🇳",
+     "st": "fim"
+    },
+    {
+     "dt": "16 Jun",
+     "m": "Noruega",
+     "fm": "🇳🇴",
+     "sc": "4–1",
+     "v": "Iraque",
+     "fv": "🇮🇶",
+     "st": "fim"
+    },
+    {
+     "dt": "22 Jun",
+     "m": "França",
+     "fm": "🇫🇷",
+     "sc": "×",
+     "v": "Iraque",
+     "fv": "🇮🇶",
+     "st": "fut"
+    },
+    {
+     "dt": "22 Jun",
+     "m": "Noruega",
+     "fm": "🇳🇴",
+     "sc": "×",
+     "v": "Senegal",
+     "fv": "🇸🇳",
+     "st": "fut"
+    }
+   ]
+  },
+  {
+   "letra": "J",
+   "brasil": false,
+   "tab": [
+    {
+     "t": "Argentina",
+     "f": "🇦🇷",
+     "pts": 3,
+     "j": 1,
+     "v": 1,
+     "e": 0,
+     "d": 0,
+     "gp": 3,
+     "gc": 0
+    },
+    {
+     "t": "Áustria",
+     "f": "🇦🇹",
+     "pts": 3,
+     "j": 1,
+     "v": 1,
+     "e": 0,
+     "d": 0,
+     "gp": 3,
+     "gc": 1
+    },
+    {
+     "t": "Argélia",
+     "f": "🇩🇿",
+     "pts": 0,
+     "j": 1,
+     "v": 0,
+     "e": 0,
+     "d": 1,
+     "gp": 0,
+     "gc": 3
+    },
+    {
+     "t": "Jordânia",
+     "f": "🇯🇴",
+     "pts": 0,
+     "j": 1,
+     "v": 0,
+     "e": 0,
+     "d": 1,
+     "gp": 1,
+     "gc": 3
+    }
+   ],
+   "res": [
+    {
+     "dt": "16 Jun",
+     "m": "Argentina",
+     "fm": "🇦🇷",
+     "sc": "3–0",
+     "v": "Argélia",
+     "fv": "🇩🇿",
+     "st": "fim"
+    },
+    {
+     "dt": "17 Jun",
+     "m": "Áustria",
+     "fm": "🇦🇹",
+     "sc": "3–1",
+     "v": "Jordânia",
+     "fv": "🇯🇴",
+     "st": "fim"
+    },
+    {
+     "dt": "22 Jun",
+     "m": "Argentina",
+     "fm": "🇦🇷",
+     "sc": "×",
+     "v": "Áustria",
+     "fv": "🇦🇹",
+     "st": "fut"
+    },
+    {
+     "dt": "22 Jun",
+     "m": "Jordânia",
+     "fm": "🇯🇴",
+     "sc": "×",
+     "v": "Argélia",
+     "fv": "🇩🇿",
+     "st": "fut"
+    }
+   ]
+  },
+  {
+   "letra": "K",
+   "brasil": false,
+   "tab": [
+    {
+     "t": "Portugal",
+     "f": "🇵🇹",
+     "pts": 1,
+     "j": 1,
+     "v": 0,
+     "e": 1,
+     "d": 0,
+     "gp": 1,
+     "gc": 1
+    },
+    {
+     "t": "Congo RD",
+     "f": "🇨🇩",
+     "pts": 1,
+     "j": 1,
+     "v": 0,
+     "e": 1,
+     "d": 0,
+     "gp": 1,
+     "gc": 1
+    },
+    {
+     "t": "Colômbia",
+     "f": "🇨🇴",
+     "pts": 3,
+     "j": 1,
+     "v": 1,
+     "e": 0,
+     "d": 0,
+     "gp": 3,
+     "gc": 1
+    },
+    {
+     "t": "Uzbequistão",
+     "f": "🇺🇿",
+     "pts": 0,
+     "j": 1,
+     "v": 0,
+     "e": 0,
+     "d": 1,
+     "gp": 1,
+     "gc": 3
+    }
+   ],
+   "res": [
+    {
+     "dt": "17 Jun",
+     "m": "Portugal",
+     "fm": "🇵🇹",
+     "sc": "1–1",
+     "v": "Congo RD",
+     "fv": "🇨🇩",
+     "st": "fim"
+    },
+    {
+     "dt": "17 Jun",
+     "m": "Uzbequistão",
+     "fm": "🇺🇿",
+     "sc": "1–3",
+     "v": "Colômbia",
+     "fv": "🇨🇴",
+     "st": "fim"
+    },
+    {
+     "dt": "23 Jun",
+     "m": "Portugal",
+     "fm": "🇵🇹",
+     "sc": "×",
+     "v": "Uzbequistão",
+     "fv": "🇺🇿",
+     "st": "fut"
+    },
+    {
+     "dt": "23 Jun",
+     "m": "Colômbia",
+     "fm": "🇨🇴",
+     "sc": "×",
+     "v": "Congo RD",
+     "fv": "🇨🇩",
+     "st": "fut"
+    }
+   ]
+  },
+  {
+   "letra": "L",
+   "brasil": false,
+   "tab": [
+    {
+     "t": "Inglaterra",
+     "f": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+     "pts": 3,
+     "j": 1,
+     "v": 1,
+     "e": 0,
+     "d": 0,
+     "gp": 4,
+     "gc": 2
+    },
+    {
+     "t": "Gana",
+     "f": "🇬🇭",
+     "pts": 3,
+     "j": 1,
+     "v": 1,
+     "e": 0,
+     "d": 0,
+     "gp": 1,
+     "gc": 0
+    },
+    {
+     "t": "Panamá",
+     "f": "🇵🇦",
+     "pts": 0,
+     "j": 1,
+     "v": 0,
+     "e": 0,
+     "d": 1,
+     "gp": 0,
+     "gc": 1
+    },
+    {
+     "t": "Croácia",
+     "f": "🇭🇷",
+     "pts": 0,
+     "j": 1,
+     "v": 0,
+     "e": 0,
+     "d": 1,
+     "gp": 2,
+     "gc": 4
+    }
+   ],
+   "res": [
+    {
+     "dt": "17 Jun",
+     "m": "Inglaterra",
+     "fm": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+     "sc": "4–2",
+     "v": "Croácia",
+     "fv": "🇭🇷",
+     "st": "fim"
+    },
+    {
+     "dt": "17 Jun",
+     "m": "Gana",
+     "fm": "🇬🇭",
+     "sc": "1–0",
+     "v": "Panamá",
+     "fv": "🇵🇦",
+     "st": "fim"
+    },
+    {
+     "dt": "23 Jun",
+     "m": "Inglaterra",
+     "fm": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+     "sc": "×",
+     "v": "Gana",
+     "fv": "🇬🇭",
+     "st": "fut"
+    },
+    {
+     "dt": "23 Jun",
+     "m": "Panamá",
+     "fm": "🇵🇦",
+     "sc": "×",
+     "v": "Croácia",
+     "fv": "🇭🇷",
+     "st": "fut"
+    }
+   ]
+  }
+ ],
+ "artilheiros": [
+  {
+   "pos": 1,
+   "n": "Lionel Messi",
+   "s": "Argentina",
+   "f": "🇦🇷",
+   "g": 3,
+   "j": 1
+  },
+  {
+   "pos": 2,
+   "n": "Kylian Mbappé",
+   "s": "França",
+   "f": "🇫🇷",
+   "g": 2,
+   "j": 1
+  },
+  {
+   "pos": 2,
+   "n": "Erling Haaland",
+   "s": "Noruega",
+   "f": "🇳🇴",
+   "g": 2,
+   "j": 1
+  },
+  {
+   "pos": 2,
+   "n": "Kai Havertz",
+   "s": "Alemanha",
+   "f": "🇩🇪",
+   "g": 2,
+   "j": 1
+  },
+  {
+   "pos": 2,
+   "n": "Harry Kane",
+   "s": "Inglaterra",
+   "f": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+   "g": 2,
+   "j": 1
+  },
+  {
+   "pos": 2,
+   "n": "Yasin Ayari",
+   "s": "Suécia",
+   "f": "🇸🇪",
+   "g": 2,
+   "j": 1
+  },
+  {
+   "pos": 2,
+   "n": "Folarin Balogun",
+   "s": "EUA",
+   "f": "🇺🇸",
+   "g": 2,
+   "j": 1
+  },
+  {
+   "pos": 9,
+   "n": "Vinicius Jr.",
+   "s": "Brasil",
+   "f": "🇧🇷",
+   "g": 1,
+   "j": 1
+  },
+  {
+   "pos": 9,
+   "n": "Raúl Jiménez",
+   "s": "México",
+   "f": "🇲🇽",
+   "g": 1,
+   "j": 1
+  },
+  {
+   "pos": 9,
+   "n": "J. Quiñones",
+   "s": "México",
+   "f": "🇲🇽",
+   "g": 1,
+   "j": 1
+  },
+  {
+   "pos": 9,
+   "n": "Alexander Isak",
+   "s": "Suécia",
+   "f": "🇸🇪",
+   "g": 1,
+   "j": 1
+  },
+  {
+   "pos": 9,
+   "n": "Viktor Gyökeres",
+   "s": "Suécia",
+   "f": "🇸🇪",
+   "g": 1,
+   "j": 1
+  },
+  {
+   "pos": 9,
+   "n": "Mattias Svanberg",
+   "s": "Suécia",
+   "f": "🇸🇪",
+   "g": 1,
+   "j": 1
+  },
+  {
+   "pos": 9,
+   "n": "Bradley Barcola",
+   "s": "França",
+   "f": "🇫🇷",
+   "g": 1,
+   "j": 1
+  },
+  {
+   "pos": 9,
+   "n": "Amad Diallo",
+   "s": "C. Marfim",
+   "f": "🇨🇮",
+   "g": 1,
+   "j": 1
+  },
+  {
+   "pos": 9,
+   "n": "Jude Bellingham",
+   "s": "Inglaterra",
+   "f": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+   "g": 1,
+   "j": 1
+  },
+  {
+   "pos": 9,
+   "n": "Marcus Rashford",
+   "s": "Inglaterra",
+   "f": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+   "g": 1,
+   "j": 1
+  },
+  {
+   "pos": 9,
+   "n": "N. Irankunda",
+   "s": "Austrália",
+   "f": "🇦🇺",
+   "g": 1,
+   "j": 1
+  },
+  {
+   "pos": 9,
+   "n": "Connor Metcalfe",
+   "s": "Austrália",
+   "f": "🇦🇺",
+   "g": 1,
+   "j": 1
+  },
+  {
+   "pos": 9,
+   "n": "João Neves",
+   "s": "Portugal",
+   "f": "🇵🇹",
+   "g": 1,
+   "j": 1
+  },
+  {
+   "pos": 9,
+   "n": "Yoane Wissa",
+   "s": "Congo RD",
+   "f": "🇨🇩",
+   "g": 1,
+   "j": 1
+  },
+  {
+   "pos": 9,
+   "n": "Gio Reyna",
+   "s": "EUA",
+   "f": "🇺🇸",
+   "g": 1,
+   "j": 1
+  },
+  {
+   "pos": 9,
+   "n": "Caleb Yirenkyi",
+   "s": "Gana",
+   "f": "🇬🇭",
+   "g": 1,
+   "j": 1
+  },
+  {
+   "pos": 9,
+   "n": "Luis Díaz",
+   "s": "Colômbia",
+   "f": "🇨🇴",
+   "g": 1,
+   "j": 1
+  },
+  {
+   "pos": 9,
+   "n": "Daniel Muñoz",
+   "s": "Colômbia",
+   "f": "🇨🇴",
+   "g": 1,
+   "j": 1
+  },
+  {
+   "pos": 9,
+   "n": "Jáminton Campaz",
+   "s": "Colômbia",
+   "f": "🇨🇴",
+   "g": 1,
+   "j": 1
+  },
+  {
+   "pos": 9,
+   "n": "A. Fayzullaev",
+   "s": "Uzbequistão",
+   "f": "🇺🇿",
+   "g": 1,
+   "j": 1
+  }
+ ],
+ "facts": [
+  {
+   "i": "🇦🇷",
+   "t": "MESSI IGUALA KLOSE",
+   "d": "Hat-trick vs Argélia leva o craque argentino a 16 gols históricos em Copas, igualando o recorde de Miroslav Klose. 1ª vez que Messi marca 3 gols em um mesmo jogo de Copa do Mundo."
+  },
+  {
+   "i": "🇫🇷",
+   "t": "MBAPPÉ ULTRAPASSA PELÉ",
+   "d": "Brace vs Senegal leva Mbappé a 14 gols históricos em Mundiais, ultrapassando o Rei Pelé. O francês disputa com Messi a artilharia all-time."
+  },
+  {
+   "i": "🇩🇪",
+   "t": "ALEMANHA 7–1 — RECORDE DA COPA",
+   "d": "Maior goleada da Copa 2026 até agora. Havertz (2), Musiala e outros brilharam. Os alemães igualaram sua própria marca na Copa de 1974 em gols numa partida."
+  },
+  {
+   "i": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+   "t": "ESCÓCIA LIDERA O GRUPO C",
+   "d": "Após 28 anos longe do Mundial, a Escócia venceu o Haiti e lidera o Grupo C. Brasil empatou 1–1 com Marrocos na estreia e busca reação no próximo jogo."
+  }
+ ],
+ "ticker": [
+  "✅ ÁUSTRIA 3–1 JORDÂNIA (Grp J)",
+  "✅ PORTUGAL 1–1 CONGO RD | João Neves · Wissa",
+  "✅ INGLATERRA 4–2 CROÁCIA | Kane ×2 · Bellingham · Rashford",
+  "✅ GANA 1–0 PANAMÁ — gol de Yirenkyi aos 94'! (Grp L)",
+  "✅ COLÔMBIA 3–1 UZBEQUISTÃO — Díaz, Muñoz, Campaz (Grp K)",
+  "⭐ MESSI hat-trick vs Argélia — 16 gols históricos = KLOSE",
+  "⭐ MBAPPÉ ×2 vs Senegal — 14 gols históricos supera PELÉ",
+  "⭐ HAALAND ×2 na estreia — Noruega 4–1 Iraque",
+  "⭐ ALEMANHA 7–1 CURAÇAO — Havertz ×2 · Musiala",
+  "⭐ AUSTRÁLIA 2–0 TURQUIA — Irankunda brilha na estreia",
+  "📅 HOJE QUI 18/06: Rep.Tcheca×Áf.Sul 13h · Suíça×Bósnia 16h · Canadá×Qatar 19h · México×Coreia 23h"
+ ],
+ "calendario": [
+  {
+   "d": "17 Jun 2026",
+   "w": "QUA",
+   "hoje": false,
+   "j": [
+    {
+     "g": "GRP J",
+     "dt": "2026-06-17T01:00:00-03:00",
+     "m": "Áustria",
+     "fm": "🇦🇹",
+     "v": "Jordânia",
+     "fv": "🇯🇴",
+     "sc": "3–1",
+     "st": "fim",
+     "hr": "01h00"
+    },
+    {
+     "g": "GRP K",
+     "dt": "2026-06-17T14:00:00-03:00",
+     "m": "Portugal",
+     "fm": "🇵🇹",
+     "v": "Congo RD",
+     "fv": "🇨🇩",
+     "sc": "1–1",
+     "st": "fim",
+     "hr": "14h00"
+    },
+    {
+     "g": "GRP L",
+     "dt": "2026-06-17T17:00:00-03:00",
+     "m": "Inglaterra",
+     "fm": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+     "v": "Croácia",
+     "fv": "🇭🇷",
+     "sc": "4–2",
+     "st": "fim",
+     "hr": "17h00"
+    },
+    {
+     "g": "GRP L",
+     "dt": "2026-06-17T20:00:00-03:00",
+     "m": "Gana",
+     "fm": "🇬🇭",
+     "v": "Panamá",
+     "fv": "🇵🇦",
+     "sc": "1–0",
+     "st": "fim",
+     "hr": "20h00"
+    },
+    {
+     "g": "GRP K",
+     "dt": "2026-06-17T23:00:00-03:00",
+     "m": "Uzbequistão",
+     "fm": "🇺🇿",
+     "v": "Colômbia",
+     "fv": "🇨🇴",
+     "sc": "1–3",
+     "st": "fim",
+     "hr": "23h00"
+    }
+   ]
+  },
+  {
+   "d": "18 Jun 2026",
+   "w": "QUI",
+   "hoje": true,
+   "j": [
+    {
+     "g": "GRP A",
+     "dt": "2026-06-18T13:00:00-03:00",
+     "m": "Rep. Tcheca",
+     "fm": "🇨🇿",
+     "v": "África do Sul",
+     "fv": "🇿🇦",
+     "sc": "×",
+     "st": "fut",
+     "hr": "13h00"
+    },
+    {
+     "g": "GRP B",
+     "dt": "2026-06-18T16:00:00-03:00",
+     "m": "Suíça",
+     "fm": "🇨🇭",
+     "v": "Bósnia",
+     "fv": "🇧🇦",
+     "sc": "×",
+     "st": "fut",
+     "hr": "16h00"
+    },
+    {
+     "g": "GRP B",
+     "dt": "2026-06-18T19:00:00-03:00",
+     "m": "Canadá",
+     "fm": "🇨🇦",
+     "v": "Qatar",
+     "fv": "🇶🇦",
+     "sc": "×",
+     "st": "fut",
+     "hr": "19h00"
+    },
+    {
+     "g": "GRP A",
+     "dt": "2026-06-18T23:00:00-03:00",
+     "m": "México",
+     "fm": "🇲🇽",
+     "v": "Coreia do Sul",
+     "fv": "🇰🇷",
+     "sc": "×",
+     "st": "fut",
+     "hr": "23h00"
+    }
+   ]
+  },
+  {
+   "d": "19 Jun 2026",
+   "w": "SEX",
+   "hoje": false,
+   "j": [
+    {
+     "g": "GRP D",
+     "dt": "2026-06-19T16:00:00-03:00",
+     "m": "EUA",
+     "fm": "🇺🇸",
+     "v": "Austrália",
+     "fv": "🇦🇺",
+     "sc": "×",
+     "st": "fut",
+     "hr": "16h00"
+    },
+    {
+     "g": "GRP C",
+     "dt": "2026-06-19T19:00:00-03:00",
+     "m": "Escócia",
+     "fm": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+     "v": "Marrocos",
+     "fv": "🇲🇦",
+     "sc": "×",
+     "st": "fut",
+     "hr": "19h00"
+    },
+    {
+     "g": "GRP C",
+     "dt": "2026-06-19T22:00:00-03:00",
+     "m": "Brasil",
+     "fm": "🇧🇷",
+     "v": "Haiti",
+     "fv": "🇭🇹",
+     "sc": "×",
+     "st": "fut",
+     "hr": "22h00"
+    },
+    {
+     "g": "GRP D",
+     "dt": "2026-06-20T01:00:00-03:00",
+     "m": "Turquia",
+     "fm": "🇹🇷",
+     "v": "Paraguai",
+     "fv": "🇵🇾",
+     "sc": "×",
+     "st": "fut",
+     "hr": "01h00"
+    }
+   ]
+  },
+  {
+   "d": "20 Jun 2026",
+   "w": "SÁB",
+   "hoje": false,
+   "j": [
+    {
+     "g": "GRP F",
+     "dt": "2026-06-20T13:00:00-03:00",
+     "m": "Holanda",
+     "fm": "🇳🇱",
+     "v": "Suécia",
+     "fv": "🇸🇪",
+     "sc": "×",
+     "st": "fut",
+     "hr": "13h00"
+    },
+    {
+     "g": "GRP E",
+     "dt": "2026-06-20T17:00:00-03:00",
+     "m": "Alemanha",
+     "fm": "🇩🇪",
+     "v": "C. Marfim",
+     "fv": "🇨🇮",
+     "sc": "×",
+     "st": "fut",
+     "hr": "17h00"
+    },
+    {
+     "g": "GRP E",
+     "dt": "2026-06-20T20:00:00-03:00",
+     "m": "Equador",
+     "fm": "🇪🇨",
+     "v": "Curaçao",
+     "fv": "🇨🇼",
+     "sc": "×",
+     "st": "fut",
+     "hr": "20h00"
+    },
+    {
+     "g": "GRP F",
+     "dt": "2026-06-20T23:00:00-03:00",
+     "m": "Tunísia",
+     "fm": "🇹🇳",
+     "v": "Japão",
+     "fv": "🇯🇵",
+     "sc": "×",
+     "st": "fut",
+     "hr": "23h00"
+    }
+   ]
+  },
+  {
+   "d": "21 Jun 2026",
+   "w": "DOM",
+   "hoje": false,
+   "j": [
+    {
+     "g": "GRP H",
+     "dt": "2026-06-21T13:00:00-03:00",
+     "m": "Espanha",
+     "fm": "🇪🇸",
+     "v": "Ar. Saudita",
+     "fv": "🇸🇦",
+     "sc": "×",
+     "st": "fut",
+     "hr": "13h00"
+    },
+    {
+     "g": "GRP G",
+     "dt": "2026-06-21T16:00:00-03:00",
+     "m": "Bélgica",
+     "fm": "🇧🇪",
+     "v": "Irã",
+     "fv": "🇮🇷",
+     "sc": "×",
+     "st": "fut",
+     "hr": "16h00"
+    },
+    {
+     "g": "GRP H",
+     "dt": "2026-06-21T19:00:00-03:00",
+     "m": "Uruguai",
+     "fm": "🇺🇾",
+     "v": "Cabo Verde",
+     "fv": "🇨🇻",
+     "sc": "×",
+     "st": "fut",
+     "hr": "19h00"
+    },
+    {
+     "g": "GRP G",
+     "dt": "2026-06-21T22:00:00-03:00",
+     "m": "N. Zelândia",
+     "fm": "🇳🇿",
+     "v": "Egito",
+     "fv": "🇪🇬",
+     "sc": "×",
+     "st": "fut",
+     "hr": "22h00"
+    }
+   ]
+  },
+  {
+   "d": "22 Jun 2026",
+   "w": "SEG",
+   "hoje": false,
+   "j": [
+    {
+     "g": "GRP J",
+     "dt": "2026-06-22T14:00:00-03:00",
+     "m": "Argentina",
+     "fm": "🇦🇷",
+     "v": "Áustria",
+     "fv": "🇦🇹",
+     "sc": "×",
+     "st": "fut",
+     "hr": "14h00"
+    },
+    {
+     "g": "GRP I",
+     "dt": "2026-06-22T18:00:00-03:00",
+     "m": "França",
+     "fm": "🇫🇷",
+     "v": "Iraque",
+     "fv": "🇮🇶",
+     "sc": "×",
+     "st": "fut",
+     "hr": "18h00"
+    },
+    {
+     "g": "GRP I",
+     "dt": "2026-06-22T21:00:00-03:00",
+     "m": "Noruega",
+     "fm": "🇳🇴",
+     "v": "Senegal",
+     "fv": "🇸🇳",
+     "sc": "×",
+     "st": "fut",
+     "hr": "21h00"
+    },
+    {
+     "g": "GRP J",
+     "dt": "2026-06-23T00:00:00-03:00",
+     "m": "Jordânia",
+     "fm": "🇯🇴",
+     "v": "Argélia",
+     "fv": "🇩🇿",
+     "sc": "×",
+     "st": "fut",
+     "hr": "00h00"
+    }
+   ]
+  },
+  {
+   "d": "23 Jun 2026",
+   "w": "TER",
+   "hoje": false,
+   "j": [
+    {
+     "g": "GRP K",
+     "dt": "2026-06-23T14:00:00-03:00",
+     "m": "Portugal",
+     "fm": "🇵🇹",
+     "v": "Uzbequistão",
+     "fv": "🇺🇿",
+     "sc": "×",
+     "st": "fut",
+     "hr": "14h00"
+    },
+    {
+     "g": "GRP L",
+     "dt": "2026-06-23T17:00:00-03:00",
+     "m": "Inglaterra",
+     "fm": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+     "v": "Gana",
+     "fv": "🇬🇭",
+     "sc": "×",
+     "st": "fut",
+     "hr": "17h00"
+    },
+    {
+     "g": "GRP L",
+     "dt": "2026-06-23T20:00:00-03:00",
+     "m": "Panamá",
+     "fm": "🇵🇦",
+     "v": "Croácia",
+     "fv": "🇭🇷",
+     "sc": "×",
+     "st": "fut",
+     "hr": "20h00"
+    },
+    {
+     "g": "GRP K",
+     "dt": "2026-06-23T23:00:00-03:00",
+     "m": "Colômbia",
+     "fm": "🇨🇴",
+     "v": "Congo RD",
+     "fv": "🇨🇩",
+     "sc": "×",
+     "st": "fut",
+     "hr": "23h00"
+    }
+   ]
+  },
+  {
+   "d": "24 Jun 2026",
+   "w": "QUA",
+   "hoje": false,
+   "j": [
+    {
+     "g": "GRP B",
+     "dt": "2026-06-24T16:00:00-03:00",
+     "m": "Suíça",
+     "fm": "🇨🇭",
+     "v": "Canadá",
+     "fv": "🇨🇦",
+     "sc": "×",
+     "st": "fut",
+     "hr": "16h00"
+    },
+    {
+     "g": "GRP B",
+     "dt": "2026-06-24T16:00:00-03:00",
+     "m": "Bósnia",
+     "fm": "🇧🇦",
+     "v": "Qatar",
+     "fv": "🇶🇦",
+     "sc": "×",
+     "st": "fut",
+     "hr": "16h00"
+    },
+    {
+     "g": "GRP C",
+     "dt": "2026-06-24T19:00:00-03:00",
+     "m": "Escócia",
+     "fm": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+     "v": "Brasil",
+     "fv": "🇧🇷",
+     "sc": "×",
+     "st": "fut",
+     "hr": "19h00"
+    },
+    {
+     "g": "GRP C",
+     "dt": "2026-06-24T19:00:00-03:00",
+     "m": "Marrocos",
+     "fm": "🇲🇦",
+     "v": "Haiti",
+     "fv": "🇭🇹",
+     "sc": "×",
+     "st": "fut",
+     "hr": "19h00"
+    }
+   ]
+  },
+  {
+   "d": "25 Jun 2026",
+   "w": "QUI",
+   "hoje": false,
+   "j": [
+    {
+     "g": "GRP A",
+     "dt": "2026-06-25T16:00:00-03:00",
+     "m": "México",
+     "fm": "🇲🇽",
+     "v": "Rep. Tcheca",
+     "fv": "🇨🇿",
+     "sc": "×",
+     "st": "fut",
+     "hr": "16h00"
+    },
+    {
+     "g": "GRP A",
+     "dt": "2026-06-25T16:00:00-03:00",
+     "m": "Coreia do Sul",
+     "fm": "🇰🇷",
+     "v": "África do Sul",
+     "fv": "🇿🇦",
+     "sc": "×",
+     "st": "fut",
+     "hr": "16h00"
+    },
+    {
+     "g": "GRP D",
+     "dt": "2026-06-25T19:00:00-03:00",
+     "m": "EUA",
+     "fm": "🇺🇸",
+     "v": "Turquia",
+     "fv": "🇹🇷",
+     "sc": "×",
+     "st": "fut",
+     "hr": "19h00"
+    },
+    {
+     "g": "GRP D",
+     "dt": "2026-06-25T19:00:00-03:00",
+     "m": "Austrália",
+     "fm": "🇦🇺",
+     "v": "Paraguai",
+     "fv": "🇵🇾",
+     "sc": "×",
+     "st": "fut",
+     "hr": "19h00"
+    }
+   ]
+  },
+  {
+   "d": "26 Jun 2026",
+   "w": "SEX",
+   "hoje": false,
+   "j": [
+    {
+     "g": "GRP E",
+     "dt": "2026-06-26T16:00:00-03:00",
+     "m": "Alemanha",
+     "fm": "🇩🇪",
+     "v": "Equador",
+     "fv": "🇪🇨",
+     "sc": "×",
+     "st": "fut",
+     "hr": "16h00"
+    },
+    {
+     "g": "GRP E",
+     "dt": "2026-06-26T16:00:00-03:00",
+     "m": "C. Marfim",
+     "fm": "🇨🇮",
+     "v": "Curaçao",
+     "fv": "🇨🇼",
+     "sc": "×",
+     "st": "fut",
+     "hr": "16h00"
+    },
+    {
+     "g": "GRP F",
+     "dt": "2026-06-26T19:00:00-03:00",
+     "m": "Holanda",
+     "fm": "🇳🇱",
+     "v": "Tunísia",
+     "fv": "🇹🇳",
+     "sc": "×",
+     "st": "fut",
+     "hr": "19h00"
+    },
+    {
+     "g": "GRP F",
+     "dt": "2026-06-26T19:00:00-03:00",
+     "m": "Suécia",
+     "fm": "🇸🇪",
+     "v": "Japão",
+     "fv": "🇯🇵",
+     "sc": "×",
+     "st": "fut",
+     "hr": "19h00"
+    },
+    {
+     "g": "GRP G",
+     "dt": "2026-06-26T22:00:00-03:00",
+     "m": "Bélgica",
+     "fm": "🇧🇪",
+     "v": "N. Zelândia",
+     "fv": "🇳🇿",
+     "sc": "×",
+     "st": "fut",
+     "hr": "22h00"
+    },
+    {
+     "g": "GRP G",
+     "dt": "2026-06-26T22:00:00-03:00",
+     "m": "Egito",
+     "fm": "🇪🇬",
+     "v": "Irã",
+     "fv": "🇮🇷",
+     "sc": "×",
+     "st": "fut",
+     "hr": "22h00"
+    },
+    {
+     "g": "GRP H",
+     "dt": "2026-06-26T22:00:00-03:00",
+     "m": "Cabo Verde",
+     "fm": "🇨🇻",
+     "v": "Ar. Saudita",
+     "fv": "🇸🇦",
+     "sc": "×",
+     "st": "fut",
+     "hr": "22h00"
+    },
+    {
+     "g": "GRP H",
+     "dt": "2026-06-26T22:00:00-03:00",
+     "m": "Uruguai",
+     "fm": "🇺🇾",
+     "v": "Espanha",
+     "fv": "🇪🇸",
+     "sc": "×",
+     "st": "fut",
+     "hr": "22h00"
+    }
+   ]
+  },
+  {
+   "d": "27 Jun 2026",
+   "w": "SÁB",
+   "hoje": false,
+   "j": [
+    {
+     "g": "GRP I",
+     "dt": "2026-06-27T16:00:00-03:00",
+     "m": "Noruega",
+     "fm": "🇳🇴",
+     "v": "França",
+     "fv": "🇫🇷",
+     "sc": "×",
+     "st": "fut",
+     "hr": "16h00"
+    },
+    {
+     "g": "GRP I",
+     "dt": "2026-06-27T16:00:00-03:00",
+     "m": "Senegal",
+     "fm": "🇸🇳",
+     "v": "Iraque",
+     "fv": "🇮🇶",
+     "sc": "×",
+     "st": "fut",
+     "hr": "16h00"
+    },
+    {
+     "g": "GRP J",
+     "dt": "2026-06-27T22:00:00-03:00",
+     "m": "Argentina",
+     "fm": "🇦🇷",
+     "v": "Jordânia",
+     "fv": "🇯🇴",
+     "sc": "×",
+     "st": "fut",
+     "hr": "22h00"
+    },
+    {
+     "g": "GRP J",
+     "dt": "2026-06-27T22:00:00-03:00",
+     "m": "Argélia",
+     "fm": "🇩🇿",
+     "v": "Áustria",
+     "fv": "🇦🇹",
+     "sc": "×",
+     "st": "fut",
+     "hr": "22h00"
+    },
+    {
+     "g": "GRP K",
+     "dt": "2026-06-27T22:00:00-03:00",
+     "m": "Colômbia",
+     "fm": "🇨🇴",
+     "v": "Portugal",
+     "fv": "🇵🇹",
+     "sc": "×",
+     "st": "fut",
+     "hr": "22h00"
+    },
+    {
+     "g": "GRP K",
+     "dt": "2026-06-27T22:00:00-03:00",
+     "m": "Congo RD",
+     "fm": "🇨🇩",
+     "v": "Uzbequistão",
+     "fv": "🇺🇿",
+     "sc": "×",
+     "st": "fut",
+     "hr": "22h00"
+    },
+    {
+     "g": "GRP L",
+     "dt": "2026-06-27T22:00:00-03:00",
+     "m": "Panamá",
+     "fm": "🇵🇦",
+     "v": "Inglaterra",
+     "fv": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+     "sc": "×",
+     "st": "fut",
+     "hr": "22h00"
+    },
+    {
+     "g": "GRP L",
+     "dt": "2026-06-27T22:00:00-03:00",
+     "m": "Croácia",
+     "fm": "🇭🇷",
+     "v": "Gana",
+     "fv": "🇬🇭",
+     "sc": "×",
+     "st": "fut",
+     "hr": "22h00"
+    }
+   ]
+  },
+  {
+   "d": "28 Jun – 3 Jul",
+   "w": "ROUND OF 32",
+   "hoje": false,
+   "j": [
+    {
+     "g": "R32",
+     "m": "1º Grp A",
+     "fm": "🏆",
+     "v": "3º melhor",
+     "fv": "🏆",
+     "sc": "",
+     "st": "fut",
+     "hr": ""
+    },
+    {
+     "g": "R32",
+     "m": "2º Grp A",
+     "fm": "🏆",
+     "v": "2º Grp B",
+     "fv": "🏆",
+     "sc": "",
+     "st": "fut",
+     "hr": ""
+    },
+    {
+     "g": "R32",
+     "m": "1º Grp C",
+     "fm": "🏆",
+     "v": "3º melhor",
+     "fv": "🏆",
+     "sc": "",
+     "st": "fut",
+     "hr": ""
+    },
+    {
+     "g": "R32",
+     "m": "1º Grp B",
+     "fm": "🏆",
+     "v": "3º melhor",
+     "fv": "🏆",
+     "sc": "",
+     "st": "fut",
+     "hr": ""
+    }
+   ]
+  },
+  {
+   "d": "19 Jul 2026",
+   "w": "GRANDE FINAL 🏆",
+   "hoje": false,
+   "j": [
+    {
+     "g": "FINAL",
+     "m": "A definir",
+     "fm": "🏆",
+     "v": "A definir",
+     "fv": "🏆",
+     "sc": "",
+     "st": "fut",
+     "hr": "16h00"
+    }
+   ]
+  }
+ ]
+}

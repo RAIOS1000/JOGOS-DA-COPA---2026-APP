@@ -222,7 +222,8 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 
 
 /* NAV rolável */
-html, body { contain: layout; }
+/* obs: 'contain:layout' foi removido — ancorava position:fixed no documento
+   (folha "Mais"/modais ficavam fora da viewport). */
 .nav{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;position:relative;-webkit-overflow-scrolling:touch;mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
 .nav::-webkit-scrollbar{display:none}
 .nb{flex:0 0 auto;white-space:nowrap;padding-left:14px;padding-right:14px}
@@ -698,6 +699,23 @@ body{font-size:16px}
 .mm-empty{text-align:center;color:var(--dim);font-size:12px;padding:34px 14px;line-height:1.8}
 .mm-empty b{color:var(--gold2)}
 
+/* ═══ FOLHA "MAIS" (navegação secundária + ajustes) ═══ */
+.more-sheet{position:fixed;inset:0;z-index:400;background:rgba(0,0,0,.6);display:none;align-items:flex-end;justify-content:center}
+.more-sheet.on{display:flex;animation:mfade .2s ease}
+@keyframes mfade{from{opacity:0}to{opacity:1}}
+.more-card{background:linear-gradient(180deg,var(--card),#0a1128);border:1px solid var(--border);border-top:2px solid var(--gold);border-radius:20px 20px 0 0;width:100%;max-width:560px;padding:16px 16px calc(18px + env(safe-area-inset-bottom));box-shadow:0 -20px 50px rgba(0,0,0,.55);animation:mup .28s cubic-bezier(.16,.84,.44,1)}
+@keyframes mup{from{transform:translateY(30px)}to{transform:none}}
+.more-h{display:flex;align-items:center;justify-content:space-between;font-family:var(--fh);font-size:20px;letter-spacing:2px;color:var(--gold);margin-bottom:14px}
+.more-x{background:rgba(255,255,255,.08);border:none;color:var(--text);width:32px;height:32px;border-radius:50%;font-size:14px;cursor:pointer}
+.more-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.more-grid button{display:flex;flex-direction:column;align-items:center;gap:6px;background:#0A1128;border:1px solid var(--border);border-radius:13px;padding:15px 6px;color:var(--text);font-family:var(--fn);font-size:12px;font-weight:600;cursor:pointer;transition:border-color .18s,color .18s,transform .15s}
+.more-grid button span{font-size:23px;line-height:1}
+.more-grid button:hover,.more-grid button.on{border-color:var(--gold);color:var(--gold2)}
+.more-grid button:active{transform:scale(.96)}
+.more-lbl{font-family:var(--fn);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin:18px 0 9px}
+.more-tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.nb#nbMore.on{color:var(--gold);border-bottom-color:var(--gold)}
+
 </style>
 </head>
 <body>
@@ -712,34 +730,46 @@ body{font-size:16px}
       </div>
     </div>
     <div class="hmeta">
-      <div class="badge">⚽ DIA 8 · 2ª RODADA</div>
       <div class="clock"><span class="dotlive"></span><span id="clock">--:--:--</span></div>
       <div class="apibar">
         <span class="apistat load" id="apistat"><span class="d"></span><span id="apistat-tx">conectando…</span></span>
         <button class="refbtn" id="refbtn" onclick="syncLive(true)">🔄 Atualizar</button>
         <button class="notifbtn" id="notifbtn" onclick="toggleNotif()">🔔 Avisar gols</button>
-        <button class="refbtn" id="ttsbtn" onclick="toggleTTS()">📻 Narração</button>
-        <button class="refbtn" id="instbtn" style="display:none" onclick="instalar()">📲 Instalar app</button>
-        <span class="sync-status" id="syncStatus"><span class="sync-dot"></span><span>Sincronizando</span><span class="sync-count" id="syncCount">30s</span></span>
-        <span class="sync-ctrl" id="syncCtrl" onclick="openSyncModal()" title="Configurar sincronização em tempo real">⚡ Sync</span>
       </div>
     </div>
   </div>
   <div class="tickwrap"><div class="tickin" id="tick"></div></div>
   <nav class="nav">
-    <button class="nb on" onclick="tab('grupos',this)">🌍 GRUPOS</button>
-    <button class="nb" onclick="tab('artilheiros',this)">🥇 ARTILHEIROS</button>
-    <button class="nb" onclick="tab('calendario',this)">📅 CALENDÁRIO</button>
-    <button class="nb" onclick="tab('mapa',this)">🧠 MAPA</button>
-    <button class="nb" onclick="tab('stats',this)">📊 STATS</button>
-    <button class="nb" onclick="tab('chave',this)">🏆 CHAVE</button>
-    <button class="nb" onclick="tab('palpites',this)">🎯 PALPITES</button>
-    <button class="nb" onclick="tab('sedes',this)">🏟️ SEDES</button>
-    <button class="nb" onclick="tab('camp',this)">🏆 CAMPEÕES</button>
-    <button class="nb" onclick="tab('sim',this)">🎮 SIMULADOR</button>
-    <button class="nb" onclick="tab('pes',this)">👤 PESSOAL</button>
+    <button class="nb on" data-sec="grupos" onclick="tab('grupos')">🌍 GRUPOS</button>
+    <button class="nb" data-sec="artilheiros" onclick="tab('artilheiros')">🥇 ARTILHEIROS</button>
+    <button class="nb" data-sec="calendario" onclick="tab('calendario')">📅 CALENDÁRIO</button>
+    <button class="nb" data-sec="mapa" onclick="tab('mapa')">🧠 MAPA</button>
+    <button class="nb" data-sec="chave" onclick="tab('chave')">🏆 CHAVE</button>
+    <button class="nb" id="nbMore" onclick="openMore()">⋯ MAIS</button>
   </nav>
 </header>
+
+<!-- Folha "Mais" — abas secundárias + ajustes -->
+<div class="more-sheet" id="moreSheet" onclick="if(event.target===this)closeMore()">
+  <div class="more-card">
+    <div class="more-h"><span>Mais opções</span><button class="more-x" onclick="closeMore()">✕</button></div>
+    <div class="more-grid">
+      <button data-sec="stats" onclick="tab('stats')"><span>📊</span>Stats</button>
+      <button data-sec="palpites" onclick="tab('palpites')"><span>🎯</span>Palpites</button>
+      <button data-sec="sedes" onclick="tab('sedes')"><span>🏟️</span>Sedes</button>
+      <button data-sec="camp" onclick="tab('camp')"><span>🏆</span>Campeões</button>
+      <button data-sec="sim" onclick="tab('sim')"><span>🎮</span>Simulador</button>
+      <button data-sec="pes" onclick="tab('pes')"><span>👤</span>Pessoal</button>
+    </div>
+    <div class="more-lbl">Ajustes</div>
+    <div class="more-tools">
+      <button class="refbtn" id="ttsbtn" onclick="toggleTTS()">📻 Narração</button>
+      <span class="sync-ctrl" id="syncCtrl" onclick="openSyncModal()" title="Configurar sincronização">⚡ Sincronização</span>
+      <button class="refbtn" id="instbtn" style="display:none" onclick="instalar()">📲 Instalar app</button>
+      <span class="sync-status" id="syncStatus"><span class="sync-dot"></span><span>Sincronizando</span><span class="sync-count" id="syncCount">30s</span></span>
+    </div>
+  </div>
+</div>
 
 <main class="main">
   <div class="lp" id="livepanel">
@@ -2279,7 +2309,7 @@ function renderSimulador(){
   h+=`<button class="sim-reset" onclick="simReset()">🔄 Voltar aos placares reais</button>`;
   document.getElementById('sim-wrap').innerHTML=h;
 }
-const _simBkp=JSON.parse(JSON.stringify(D.grupos));
+let _simBkp=JSON.parse(JSON.stringify(D.grupos));
 function simAtualiza(key,a,b){
   const [m,v]=key.split('|');
   D.grupos.forEach(g=>g.res.forEach(r=>{
@@ -2358,9 +2388,15 @@ function allMatches(){ const all=[]; D.calendario.forEach(d=>d.j.forEach(j=>all.
 // ═══════════════════════════════════════
 function tab(id,btn){
   document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
-  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('on'));
-  document.getElementById(id).classList.add('on');
-  btn.classList.add('on');
+  document.querySelectorAll('.nb, .more-grid button').forEach(b=>b.classList.remove('on'));
+  const sec=document.getElementById(id); if(sec) sec.classList.add('on');
+  // destaca o botão certo: aba principal (data-sec) ou o botão "Mais" p/ as secundárias
+  const prim=document.querySelector('.nb[data-sec="'+id+'"]');
+  if(prim){ prim.classList.add('on'); }
+  else { const more=document.getElementById('nbMore'); if(more) more.classList.add('on'); }
+  const inSheet=document.querySelector('.more-grid button[data-sec="'+id+'"]'); if(inSheet) inSheet.classList.add('on');
+  if(typeof closeMore==='function') closeMore();
+  window.scrollTo({top:0,behavior:'smooth'});
   if(id==='stats') renderStats();
   else if(id==='mapa') renderMapaMental();
   else if(id==='chave') renderBracket();
@@ -2370,6 +2406,8 @@ function tab(id,btn){
   else if(id==='sim') renderSimulador();
   else if(id==='pes') renderPessoal();
 }
+function openMore(){ const s=document.getElementById('moreSheet'); if(s) s.classList.add('on'); }
+function closeMore(){ const s=document.getElementById('moreSheet'); if(s) s.classList.remove('on'); }
 
 
 // ═══════════════════════════════════════
@@ -3113,6 +3151,35 @@ setInterval(()=>{
 setInterval(()=>{ if(notifAtiva()) checkKickoffReminders(); }, 30000);
 // se já estava com notificações ligadas ao abrir, relembra os horários do dia + artilharia
 if(notifAtiva()){ notifyJogosDoDia(false); notifyArtilheiros(false); checkKickoffReminders(); }
+
+// ═══════════════════════════════════════
+//  📥 DADOS EXTERNOS (dados.json) — fácil de atualizar, com fallback pro embutido
+//  Para atualizar a Copa: edite dados.json (grupos/res, artilheiros, calendário…).
+//  Se o arquivo não existir ou falhar (offline), o app usa os dados embutidos.
+// ═══════════════════════════════════════
+function _reRenderAtiva(){
+  const on=document.querySelector('.sec.on'); const id=on?on.id:'grupos';
+  const map={stats:renderStats,mapa:renderMapaMental,chave:renderBracket,palpites:renderPalpites,
+    sedes:renderSedes,camp:renderCampeoes,sim:renderSimulador,pes:renderPessoal};
+  try{ if(map[id]) map[id](); }catch(e){}
+}
+(function carregarDadosExternos(){
+  try{
+    fetch('dados.json?v='+Date.now(),{cache:'no-store'})
+      .then(r=>r.ok?r.json():null)
+      .then(j=>{
+        if(!j || !Array.isArray(j.grupos) || !j.grupos.length) return;  // fallback: mantém embutido
+        Object.assign(D, j);
+        _simBkp=JSON.parse(JSON.stringify(D.grupos));
+        if(typeof recalcTodos==='function') recalcTodos();
+        renderTicker(); renderGrupos(); renderArtilheiros(); renderCalendario(); renderLivePanel();
+        (function(){ try{ const all=allMatches(); all.forEach(x=>{const k=x.m+'|'+x.v; if(x.sc&&x.sc!=='×') _prevScores[k]=x.sc;}); localStorage.setItem('prevScores',JSON.stringify(_prevScores)); }catch(e){} })();
+        _reRenderAtiva();
+        const st=document.getElementById('apistat-tx'); if(st && st.textContent.indexOf('salvos')<0){ /* status inalterado */ }
+      })
+      .catch(()=>{});   // offline / sem arquivo → segue com o embutido
+  }catch(e){}
+})();
 </script>
 
 <div class="ovl" id="ovl" onclick="if(event.target===this)closeTeam()">

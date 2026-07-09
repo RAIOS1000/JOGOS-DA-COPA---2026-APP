@@ -1351,9 +1351,29 @@ function renderTicker(){
 }
 
 // ═══════════════════════════════════════
+//  CLASSIFICAÇÃO AUTOMÁTICA (calculada dos placares)
+//  Você só edita o placar em res[]; pontos, saldo e gols saem sozinhos.
+// ═══════════════════════════════════════
+function recalcGrupo(g){
+  if(!g||!g.tab||!g.res) return;
+  const by={};
+  g.tab.forEach(t=>{ t.pts=0;t.j=0;t.v=0;t.e=0;t.d=0;t.gp=0;t.gc=0; by[t.t]=t; });
+  g.res.forEach(r=>{
+    const m=(r.sc||'').match(/(\d+)\s*[–-]\s*(\d+)/); if(!m) return;   // ignora "×"/sem placar
+    const a=+m[1], b=+m[2], H=by[r.m], A=by[r.v]; if(!H||!A) return;
+    H.j++; A.j++; H.gp+=a; H.gc+=b; A.gp+=b; A.gc+=a;
+    if(a>b){ H.v++; A.d++; H.pts+=3; }
+    else if(a<b){ A.v++; H.d++; A.pts+=3; }
+    else { H.e++; A.e++; H.pts++; A.pts++; }
+  });
+}
+function recalcTodos(){ if(typeof D!=='undefined'&&D.grupos) D.grupos.forEach(recalcGrupo); }
+
+// ═══════════════════════════════════════
 //  RENDER — GRUPOS
 // ═══════════════════════════════════════
 function renderGrupos(){
+  recalcTodos();   // garante a tabela sempre coerente com os placares
   const el=document.getElementById('gg');
   const _gs=[...D.grupos].sort((a,b)=>{
       const fa=a.tab.some(t=>isFav(t.t))?1:0, fb=b.tab.some(t=>isFav(t.t))?1:0;
@@ -1532,10 +1552,14 @@ function renderCalendario(){
       </div>`;
     }).join('');
 
-    const hoje_lbl=d.hoje?`<span class="clive">⚡ HOJE</span>`:'';
+    // "HOJE" dinâmico: segue a data real (Brasília), não um dia fixo no código
+    const _hoje=(typeof dataBrasilia==='function')
+      ? (d.j||[]).some(j=>j.dt && dataBrasilia(j.dt)===dataBrasilia())
+      : d.hoje;
+    const hoje_lbl=_hoje?`<span class="clive">⚡ HOJE</span>`:'';
     return `<div class="cday">
       <div class="cdh">
-        <span class="cdt ${d.hoje?'hoje':''}">${d.d}</span>
+        <span class="cdt ${_hoje?'hoje':''}">${d.d}</span>
         <span class="cdw">${d.w}</span>
         ${hoje_lbl}
       </div>
@@ -2219,23 +2243,37 @@ function renderCampeoes(){
 // ═══════════════════════════════════════
 function renderSimulador(){
   if(!D||!D.grupos||!D.grupos.length){document.getElementById('sim-wrap').innerHTML='<div style="text-align:center;color:var(--dim)">Carregando…</div>';return;}
-  const grupos=[...D.grupos].sort((a,b)=>((a.n||'').charCodeAt(0)||0)-((b.n||'').charCodeAt(0)||0));
-  let h=`<div class="sim-intro"><h3>🎮 Simulador</h3><p>Edite os placares ficticiamente e veja como fica a classificação em tempo real.</p></div>`;
+  recalcTodos();
+  const grupos=[...D.grupos].sort((a,b)=>(a.letra||'').localeCompare(b.letra||''));
+  let h=`<div class="sim-intro"><h3>🎮 Simulador</h3><p>Edite os placares e veja a classificação mudar na hora. Os classificados (1º e 2º) ficam em verde.</p></div>`;
   grupos.forEach(g=>{
-    h+=`<div style="margin-bottom:18px"><div class="sec-h" style="margin:16px 0 12px">GRP ${g.n}</div>`;
+    h+=`<div style="margin-bottom:20px"><div class="sec-h" style="margin:16px 0 10px">GRUPO ${g.letra}</div>`;
     g.res.forEach(r=>{
       const mt=(r.sc||'').match(/(\d+)[–-](\d+)/)||['','0','0'];
-      const id=r.m+'|'+r.v;
+      const idc=(r.m+'|'+r.v).replace(/'/g,'');
       h+=`<div class="sim-m">
-        <div class="sim-head"><span>${r.g}</span><span>${r.hr||'?'}</span></div>
+        <div class="sim-head"><span>${r.g}</span><span>${r.hr||''}</span></div>
         <div class="sim-row">
           <div class="sim-tm">${r.fm} ${r.m}</div>
-          <input type="number" min="0" max="20" value="${mt[1]}" onchange="simAtualiza('${id.replace(/'/g,'')}',this.value,document.getElementById('sim_${id.replace(/'/g,'')}_b').value)" id="sim_${id.replace(/'/g,'')}_a" class="sim-inp">
-          <input type="number" min="0" max="20" value="${mt[2]}" onchange="simAtualiza('${id.replace(/'/g,'')}',document.getElementById('sim_${id.replace(/'/g,'')}_a').value,this.value)" id="sim_${id.replace(/'/g,'')}_b" class="sim-inp">
+          <input type="number" min="0" max="20" value="${mt[1]}" onchange="simAtualiza('${idc}',this.value,document.getElementById('sim_${idc}_b').value)" id="sim_${idc}_a" class="sim-inp">
+          <input type="number" min="0" max="20" value="${mt[2]}" onchange="simAtualiza('${idc}',document.getElementById('sim_${idc}_a').value,this.value)" id="sim_${idc}_b" class="sim-inp">
           <div class="sim-tm r">${r.v} ${r.fv}</div>
         </div>
       </div>`;
     });
+    // classificação recalculada ao vivo
+    const sorted=[...g.tab].sort((a,b)=>{ if(b.pts!==a.pts)return b.pts-a.pts; const df=x=>x.gp-x.gc; if(df(b)!==df(a))return df(b)-df(a); return b.gp-a.gp; });
+    h+='<table style="width:100%;border-collapse:collapse;margin:10px 0 2px;font-size:12.5px">';
+    h+='<thead><tr style="color:var(--dim);font-size:8px;letter-spacing:1px;text-transform:uppercase"><th style="text-align:left;padding:4px 8px">#  Seleção</th><th style="padding:4px 6px">J</th><th style="padding:4px 6px">SG</th><th style="padding:4px 8px">PTS</th></tr></thead><tbody>';
+    sorted.forEach((t,i)=>{ const sg=t.gp-t.gc; const q=i<2;
+      h+=`<tr style="background:${q?'rgba(38,196,106,.09)':'transparent'};border-top:1px solid rgba(255,255,255,.04)">
+        <td style="padding:6px 8px;text-align:left"><span style="color:${q?'#2fd07a':'var(--dim)'};font-family:var(--fn)">${i+1}º</span> ${t.f} <span style="font-size:12px">${t.t}</span></td>
+        <td style="padding:6px 6px;text-align:center;color:var(--dim);font-family:var(--fn)">${t.j}</td>
+        <td style="padding:6px 6px;text-align:center;font-family:var(--fn)" class="${sgc(sg)}">${sgs(sg)}</td>
+        <td style="padding:6px 8px;text-align:center;font-weight:700;color:var(--gold);font-family:var(--fn)">${t.pts}</td>
+      </tr>`;
+    });
+    h+='</tbody></table>';
     h+='</div>';
   });
   h+=`<button class="sim-reset" onclick="simReset()">🔄 Voltar aos placares reais</button>`;
@@ -2247,8 +2285,9 @@ function simAtualiza(key,a,b){
   D.grupos.forEach(g=>g.res.forEach(r=>{
     if(r.m===m&&r.v===v){ r.sc=(a||0)+'–'+(b||0); }
   }));
-  D.grupos.forEach(g=>{ g.tab=D.grupos.find(x=>x.nm===g.nm).res.reduce((acc,r)=>{/*calc*/}, []); });
+  recalcTodos();          // recalcula a classificação (corrige o bug que zerava a tabela)
   renderSimulador();
+  if(typeof renderGrupos==='function') renderGrupos();   // reflete na aba Grupos
 }
 function simReset(){ D.grupos=JSON.parse(JSON.stringify(_simBkp)); renderSimulador(); }
 
